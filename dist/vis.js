@@ -25,7 +25,7 @@
 
 "use strict";
 
-define("vis", [], function() { return /******/ (function(modules) { // webpackBootstrap
+define([], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -1860,7 +1860,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
   $export.B = 16;  // bind
   $export.W = 32;  // wrap
   $export.U = 64;  // safe
-  $export.R = 128; // real proto method for `library` 
+  $export.R = 128; // real proto method for `library`
   module.exports = $export;
 
 /***/ }),
@@ -2986,7 +2986,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
 /* 79 */
 /***/ (function(module, exports) {
 
-  
+
 
 /***/ }),
 /* 80 */
@@ -9620,8 +9620,8 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
     verticalRatio: 0.5, // 0.1 to 1.0, where 1.0 results in a 'cube'
 
     dotSizeRatio: 0.02, // size of the dots as a fraction of the graph width
-    dotSizeMinFraction: 0.5, // size of min-value dot as a fraction of dotSizeRatio	
-    dotSizeMaxFraction: 2.5, // size of max-value dot as a fraction of dotSizeRatio	
+    dotSizeMinFraction: 0.5, // size of min-value dot as a fraction of dotSizeRatio
+    dotSizeMaxFraction: 2.5, // size of max-value dot as a fraction of dotSizeRatio
 
     showAnimationControls: autoByDefault,
     animationInterval: 1000, // milliseconds
@@ -12014,7 +12014,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
 /* 99 */
 /***/ (function(module, exports) {
 
-  
+
   /**
    * Expose `Emitter`.
    */
@@ -13398,7 +13398,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
   /**
    * Field names in the options hash which are of relevance to the user.
    *
-   * Same as OPTIONKEYS, but internally these fields are stored with 
+   * Same as OPTIONKEYS, but internally these fields are stored with
    * prefix 'default' in the name.
    */
   var PREFIXEDOPTIONKEYS = ['xBarWidth', 'yBarWidth', 'valueMin', 'valueMax', 'xMin', 'xMax', 'xStep', 'yMin', 'yMax', 'yStep', 'zMin', 'zMax', 'zStep'];
@@ -13447,11 +13447,11 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    * Forcibly copy fields from src to dst in a controlled manner.
    *
    * A given field in dst will always be overwitten. If this field
-   * is undefined or not present in src, the field in dst will 
+   * is undefined or not present in src, the field in dst will
    * be explicitly set to undefined.
-   * 
+   *
    * The intention here is to be able to reset all option fields.
-   * 
+   *
    * Only the fields mentioned in array 'fields' will be handled.
    *
    * @param fields array with names of fields to copy
@@ -13495,8 +13495,8 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
   /**
    * Initialize dst with the values in src.
    *
-   * src is the hash with the default values. 
-   * A reference DEFAULTS to this hash is stored locally for 
+   * src is the hash with the default values.
+   * A reference DEFAULTS to this hash is stored locally for
    * further handling.
    *
    * For now, dst is assumed to be a Graph3d instance.
@@ -17707,7 +17707,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    function is 'easeInOutQuad'.
    *                              {Boolean} [byUser=false]
    *                              {Event}  event  Mouse event
-   *                              {Function} a callback funtion to be executed at the end of this function 
+   *                              {Function} a callback funtion to be executed at the end of this function
    *
    */
 
@@ -18548,7 +18548,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
 
   /**
    * used in Core to convert the options into a volatile variable
-   * 
+   *
    * @param {function} moment
    * @param {Object} body
    * @param {Array | Object} hiddenDates
@@ -19312,7 +19312,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
       if (event.stopPropagation) {
         event.stopPropagation();
       }
-      // return when dropping non-vis items 
+      // return when dropping non-vis items
       try {
         var itemData = JSON.parse(event.dataTransfer.getData("text"));
         if (!itemData.content) return;
@@ -19670,7 +19670,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    provided to specify duration and easing function.
    *                                    Default duration is 500 ms, and default easing
    *                                    function is 'easeInOutQuad'.
-   * @param {Function} a callback funtion to be executed at the end of this function 
+   * @param {Function} a callback funtion to be executed at the end of this function
    */
   Core.prototype.fit = function (options, callback) {
     var range = this.getDataRange();
@@ -19718,7 +19718,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    provided to specify duration and easing function.
    *                                    Default duration is 500 ms, and default easing
    *                                    function is 'easeInOutQuad'.
-   * @param {Function} a callback funtion to be executed at the end of this function 
+   * @param {Function} a callback funtion to be executed at the end of this function
    */
   Core.prototype.setWindow = function (start, end, options, callback) {
     if (typeof arguments[2] == "function") {
@@ -19751,7 +19751,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    provided to specify duration and easing function.
    *                                    Default duration is 500 ms, and default easing
    *                                    function is 'easeInOutQuad'.
-   * @param {Function} a callback funtion to be executed at the end of this function 
+   * @param {Function} a callback funtion to be executed at the end of this function
    */
   Core.prototype.moveTo = function (time, options, callback) {
     if (typeof arguments[1] == "function") {
@@ -19790,7 +19790,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    provided to specify duration and easing function.
    *                                    Default duration is 500 ms, and default easing
    *                                    function is 'easeInOutQuad'.
-   * @param {Function} a callback funtion to be executed at the end of this function 
+   * @param {Function} a callback funtion to be executed at the end of this function
    */
   Core.prototype.zoomIn = function (percentage, options, callback) {
     if (!percentage || percentage < 0 || percentage > 1) return;
@@ -19820,7 +19820,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
    *                                    provided to specify duration and easing function.
    *                                    Default duration is 500 ms, and default easing
    *                                    function is 'easeInOutQuad'.
-   * @param {Function} a callback funtion to be executed at the end of this function 
+   * @param {Function} a callback funtion to be executed at the end of this function
    */
   Core.prototype.zoomOut = function (percentage, options, callback) {
     if (!percentage || percentage < 0 || percentage > 1) return;
@@ -20600,7 +20600,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
     this.body.dom.centerContainer.addEventListener('mouseover', this._onMouseOver.bind(this));
     this.body.dom.centerContainer.addEventListener('mouseout', this._onMouseOut.bind(this));
     this.body.dom.centerContainer.addEventListener('mousemove', this._onMouseMove.bind(this));
-    // right-click on timeline 
+    // right-click on timeline
     this.body.dom.centerContainer.addEventListener('contextmenu', this._onDragEnd.bind(this));
 
     this.body.dom.centerContainer.addEventListener('mousewheel', this._onMouseWheel.bind(this));
@@ -21263,7 +21263,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
       var selected;
 
       if (item) {
-        // update item   	
+        // update item
         if (!constructor || !(item instanceof constructor)) {
           // item type has changed, delete the item and recreate it
           selected = item.selected; // preserve selection of this item
@@ -22046,7 +22046,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
                 orgOffset = 1;
                 continue;
               }
-              // found a group (apart from dragged group) that has the wrong position -> switch with the 
+              // found a group (apart from dragged group) that has the wrong position -> switch with the
               // group at the position where other one should be, fix index arrays and continue
               else {
                   var slippedPosition = newOrder.indexOf(origOrder[curPos + orgOffset]);
@@ -22105,7 +22105,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
                 break;
               }
 
-              // found a group that has the wrong position -> switch with the 
+              // found a group that has the wrong position -> switch with the
               // group at the position where other one should be, fix index arrays and continue
               var slippedPosition = newOrder.indexOf(origOrder[curPos]);
               var switchGroup = dataset.get(newOrder[curPos]);
@@ -23604,7 +23604,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
 
     var restack = forceRestack || this.stackDirty || this.isVisible && !lastIsVisible;
 
-    // if restacking, reposition visible items vertically 
+    // if restacking, reposition visible items vertically
     if (restack) {
       if (typeof this.itemSet.options.order === 'function') {
         // a custom order function
@@ -24904,7 +24904,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
       var tooltipOffset = 50; // TODO: should be tooltip height (depends on template)
       var scrollTop = this.parent.itemSet.body.domProps.scrollTop;
 
-      // TODO: this.top for orientation:true is actually the items distance from the bottom... 
+      // TODO: this.top for orientation:true is actually the items distance from the bottom...
       // (should be this.bottom)
       var itemDistanceFromTop;
       if (this.options.orientation.item == 'top') {
@@ -35088,7 +35088,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
           value: function load(url, brokenUrl, id) {
               var _this = this;
 
-              //Try and get the image from the cache, if successful then return the cached image   
+              //Try and get the image from the cache, if successful then return the cached image
               var cachedImage = this.images[url];
               if (cachedImage) return cachedImage;
 
@@ -35099,7 +35099,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
               // Also, there will be multiple loads of the same image.
               this.images[url] = img;
 
-              //Subscribe to the event that is raised if the image loads successfully 
+              //Subscribe to the event that is raised if the image loads successfully
               img.image.onload = function () {
                   // Properly init the cached item and then request a redraw
                   _this._fixImageCoordinates(img.image);
@@ -38350,7 +38350,7 @@ define("vis", [], function() { return /******/ (function(modules) { // webpackBo
        * Set the images for this node.
        *
        * The images can be updated after the initial setting of options;
-       * therefore, this method needs to be reentrant. 
+       * therefore, this method needs to be reentrant.
        *
        * For correct working in error cases, it is necessary to properly set
        * field 'nodes.brokenImage' in the options.
