@@ -64,7 +64,7 @@ var webpackConfig = {
   entry: ENTRY,
   output: {
     library: 'vis',
-    libraryTarget: 'umd',
+    libraryTarget: 'amd',
     path: DIST,
     filename: VIS_JS,
     sourcePrefix: '  '

@@ -5,7 +5,7 @@
  * A dynamic, browser-based visualization library.
  *
  * @version 4.20.0
- * @date    2017-05-21
+ * @date    2017-06-29
  *
  * @license
  * Copyright (C) 2011-2017 Almende B.V, http://almende.com
@@ -25,17 +25,7 @@
 
 "use strict";
 
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["vis"] = factory();
-	else
-		root["vis"] = factory();
-})(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
+define("vis", [], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -35396,8 +35386,8 @@ return /******/ (function(modules) { // webpackBootstrap
       { border: "#FFC0CB", background: "#FD5A77", highlight: { border: "#FFD1D9", background: "#FD5A77" }, hover: { border: "#FFD1D9", background: "#FD5A77" } }, // 18: pink
       { border: "#C2FABC", background: "#74D66A", highlight: { border: "#E6FFE3", background: "#74D66A" }, hover: { border: "#E6FFE3", background: "#74D66A" } }, // 19: mint
 
-      { border: "#EE0000", background: "#990000", highlight: { border: "#FF3333", background: "#BB0000" }, hover: { border: "#FF3333", background: "#BB0000" } } // 20:bright red
-      ];
+      { border: "#EE0000", background: "#990000", highlight: { border: "#FF3333", background: "#BB0000" }, hover: { border: "#FF3333", background: "#BB0000" } // 20:bright red
+      }];
 
       this.options = {};
       this.defaultOptions = {
@@ -52368,6 +52358,7 @@ return /******/ (function(modules) { // webpackBootstrap
       minVelocity: [0.1, 0.01, 0.5, 0.01],
       solver: ['barnesHut', 'forceAtlas2Based', 'repulsion', 'hierarchicalRepulsion'],
       timestep: [0.5, 0.01, 1, 0.01]
+      //adaptiveTimestep: true
     }
   };
 
@@ -52828,6 +52819,4 @@ return /******/ (function(modules) { // webpackBootstrap
   exports["default"] = FloydWarshall;
 
 /***/ })
-/******/ ])
-});
-;
+/******/ ])});;
